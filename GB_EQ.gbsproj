@@ -16,8 +16,8 @@
                 {
                     "id": "e63a0fb5-2d9e-4a85-9ba0-e711e6de6cdc",
                     "spriteSheetId": "30b8266a-0533-4f90-bd33-e97dc1d498ea",
-                    "x": 21,
-                    "y": 6,
+                    "x": 8,
+                    "y": 12,
                     "movementType": "static",
                     "direction": "down",
                     "script": [
@@ -25,7 +25,10 @@
                             "id": "149845e1-e0b4-4a2e-97e3-4a59c8bc2634",
                             "command": "EVENT_TEXT",
                             "args": {
-                                "text": "Welcome to\nGBStudio!"
+                                "text": [
+                                    "Welcome to\nGreater FayDark",
+                                    "North is Faydwer"
+                                ]
                             }
                         },
                         {
@@ -42,27 +45,10 @@
                     "hit3Script": []
                 },
                 {
-                    "id": "d12d5092-2716-441d-bab0-0e15fe715f5e",
-                    "spriteSheetId": "ede130e6-013a-42d1-a786-1aed3fd3cf32",
-                    "x": 5,
-                    "y": 21,
-                    "movementType": "static",
-                    "direction": "down",
-                    "animate": true,
-                    "animSpeed": "1",
-                    "frame": 0,
-                    "script": [],
-                    "spriteType": "static",
-                    "startScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": []
-                },
-                {
                     "id": "076a0612-024a-426a-85fc-3e1054b9f74e",
-                    "spriteSheetId": "1e27bb8e-c805-435a-8b87-05b4f50da4f0",
-                    "x": 4,
-                    "y": 6,
+                    "spriteSheetId": "b3ac5df4-ac42-4db4-88c4-5cd7453785e4",
+                    "x": 6,
+                    "y": 28,
                     "movementType": "static",
                     "direction": "down",
                     "script": [
@@ -95,11 +81,11 @@
                 },
                 {
                     "id": "a85c4ba5-9bc0-4daa-94bc-4ef68a690659",
-                    "spriteSheetId": "dfa75239-299d-41fe-a6cd-9e9438da1938",
-                    "x": 28,
-                    "y": 14,
+                    "spriteSheetId": "50d31b4e-c47c-4165-855b-0e8ce876e8dc",
+                    "x": 18,
+                    "y": 8,
                     "movementType": "faceInteraction",
-                    "direction": "left",
+                    "direction": "down",
                     "script": [
                         {
                             "id": "81f7693e-8544-4bb2-bf47-b8963fe90982",
@@ -167,24 +153,26 @@
                 },
                 {
                     "id": "5cf6eb6c-be62-4efc-9cbb-14a8efac21a8",
-                    "spriteSheetId": "dfa75239-299d-41fe-a6cd-9e9438da1938",
-                    "x": 28,
-                    "y": 20,
+                    "spriteSheetId": "50d31b4e-c47c-4165-855b-0e8ce876e8dc",
+                    "x": 12,
+                    "y": 8,
                     "movementType": "faceInteraction",
-                    "direction": "left",
+                    "direction": "down",
                     "script": [
                         {
                             "id": "b1c3d75d-d579-47af-8f3e-4cd96178fbb0",
                             "command": "EVENT_TEXT",
                             "args": {
-                                "text": "Check out this\nsweet duck!"
+                                "text": "Check out this\nsweet duck!",
+                                "__collapse": true
                             }
                         },
                         {
                             "id": "0830a973-dd64-44ad-ad07-a677a31a27aa",
                             "command": "EVENT_SET_TRUE",
                             "args": {
-                                "variable": "1"
+                                "variable": "1",
+                                "__collapse": true
                             }
                         },
                         {
@@ -212,8 +200,8 @@
                 {
                     "id": "5aa3ca8b-31c6-444a-9c94-9f25cdf41938",
                     "spriteSheetId": "e9e61bf7-88fd-491d-ae01-4b7f76909108",
-                    "x": 28,
-                    "y": 24,
+                    "x": 8,
+                    "y": 6,
                     "movementType": "faceInteraction",
                     "direction": "down",
                     "moveSpeed": "1",
@@ -228,8 +216,8 @@
                 {
                     "id": "e807b22f-7477-471b-b3b3-53b699df82ab",
                     "spriteSheetId": "e9e61bf7-88fd-491d-ae01-4b7f76909108",
-                    "x": 28,
-                    "y": 11,
+                    "x": 22,
+                    "y": 6,
                     "movementType": "faceInteraction",
                     "direction": "down",
                     "moveSpeed": "1",
@@ -244,8 +232,8 @@
                 {
                     "id": "025c7320-2eb1-4209-bf74-c1eef183ecc8",
                     "spriteSheetId": "f2610e3c-8ff9-42fa-a9bb-d1591031fa17",
-                    "x": 28,
-                    "y": 22,
+                    "x": 8,
+                    "y": 4,
                     "movementType": "static",
                     "direction": "down",
                     "moveSpeed": "1",
@@ -262,8 +250,8 @@
                 {
                     "id": "ee80f72c-ec7c-46d1-9653-23b16fcce2d9",
                     "spriteSheetId": "f2610e3c-8ff9-42fa-a9bb-d1591031fa17",
-                    "x": 28,
-                    "y": 9,
+                    "x": 22,
+                    "y": 4,
                     "movementType": "static",
                     "direction": "down",
                     "moveSpeed": "1",
@@ -276,15 +264,34 @@
                     "hit1Script": [],
                     "hit2Script": [],
                     "hit3Script": []
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": true,
+                    "spriteSheetId": "f94fa957-8199-4cec-a24a-15f66649ebe7",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": "1",
+                    "animSpeed": "3",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "76ffc333-4d3b-4070-8dd3-ab4f407f6c8c",
+                    "x": 25,
+                    "y": 28
                 }
             ],
             "triggers": [
                 {
                     "id": "5eadc594-d498-43b4-9e0f-d7e83f03b30d",
-                    "x": 29,
-                    "y": 16,
+                    "x": 30,
+                    "y": 5,
                     "width": 2,
-                    "height": 2,
+                    "height": 27,
                     "trigger": "walk",
                     "script": [
                         {
@@ -305,8 +312,8 @@
                     ]
                 },
                 {
-                    "x": 18,
-                    "y": 2,
+                    "x": 15,
+                    "y": 7,
                     "width": 2,
                     "height": 1,
                     "trigger": "walk",
@@ -328,28 +335,29 @@
                         }
                     ],
                     "id": "4916f378-602b-4df7-a453-baeaaad59c3c"
+                },
+                {
+                    "name": "",
+                    "trigger": "walk",
+                    "script": [],
+                    "id": "3717a208-102a-436b-aba8-0f3b442f1367",
+                    "x": 0,
+                    "y": 5,
+                    "width": 1,
+                    "height": 27
+                },
+                {
+                    "name": "",
+                    "trigger": "walk",
+                    "script": [],
+                    "id": "80bc25a2-9691-40a3-a5d5-e0584857c3f4",
+                    "x": 1,
+                    "y": 31,
+                    "width": 29,
+                    "height": 1
                 }
             ],
             "collisions": [
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
                 0,
                 0,
                 0,
@@ -363,25 +371,48 @@
                 0,
                 0,
                 0,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
                 0,
                 0,
                 0,
@@ -395,6 +426,66 @@
                 0,
                 0,
                 0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
                 15,
                 15,
                 15,
@@ -409,11 +500,24 @@
                 15,
                 15,
                 15,
+                0,
+                0,
+                0,
+                0,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
                 15,
                 15,
                 15,
                 15,
                 15,
+                15,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -430,20 +534,47 @@
                 15,
                 0,
                 0,
-                15,
-                15,
                 0,
                 0,
                 15,
-                15,
                 0,
                 0,
-                15,
-                15,
+                0,
+                0,
                 0,
                 0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
                 15,
+                0,
+                0,
+                0,
+                0,
                 15,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
                 0,
                 0,
                 0,
@@ -459,10 +590,17 @@
                 0,
                 0,
                 0,
+                0,
+                0,
+                0,
+                0,
+                0,
                 15,
                 15,
                 0,
                 0,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -491,8 +629,6 @@
                 0,
                 0,
                 0,
-                15,
-                15,
                 0,
                 0,
                 0,
@@ -523,8 +659,6 @@
                 0,
                 0,
                 0,
-                15,
-                15,
                 0,
                 0,
                 0,
@@ -555,7 +689,6 @@
                 0,
                 0,
                 0,
-                15,
                 0,
                 0,
                 0,
@@ -587,8 +720,6 @@
                 0,
                 0,
                 0,
-                15,
-                15,
                 0,
                 0,
                 0,
@@ -617,10 +748,6 @@
                 0,
                 0,
                 0,
-                15,
-                15,
-                15,
-                15,
                 0,
                 0,
                 0,
@@ -649,10 +776,6 @@
                 0,
                 0,
                 0,
-                15,
-                15,
-                15,
-                15,
                 0,
                 0,
                 0,
@@ -681,9 +804,6 @@
                 0,
                 0,
                 0,
-                15,
-                15,
-                15,
                 0,
                 0,
                 0,
@@ -714,14 +834,9 @@
                 0,
                 0,
                 0,
-                15,
-                15,
-                15,
                 0,
                 0,
                 0,
-                15,
-                15,
                 0,
                 0,
                 0,
@@ -745,16 +860,8 @@
                 0,
                 0,
                 0,
-                15,
-                15,
-                15,
-                15,
                 0,
                 0,
-                15,
-                15,
-                15,
-                15,
                 0,
                 0,
                 0,
@@ -777,16 +884,8 @@
                 0,
                 0,
                 0,
-                15,
-                15,
-                15,
-                15,
                 0,
                 0,
-                15,
-                15,
-                15,
-                15,
                 0,
                 0,
                 0,
@@ -809,15 +908,10 @@
                 0,
                 0,
                 0,
-                15,
-                15,
-                15,
                 0,
                 0,
                 0,
                 0,
-                15,
-                15,
                 0,
                 0,
                 0,
@@ -842,9 +936,6 @@
                 0,
                 0,
                 0,
-                15,
-                15,
-                15,
                 0,
                 0,
                 0,
@@ -873,10 +964,6 @@
                 0,
                 0,
                 0,
-                15,
-                15,
-                15,
-                15,
                 0,
                 0,
                 0,
@@ -905,10 +992,6 @@
                 0,
                 0,
                 0,
-                15,
-                15,
-                15,
-                15,
                 0,
                 0,
                 0,
@@ -937,9 +1020,6 @@
                 0,
                 0,
                 0,
-                15,
-                15,
-                15,
                 0,
                 0,
                 0,
@@ -970,9 +1050,6 @@
                 0,
                 0,
                 0,
-                15,
-                15,
-                15,
                 0,
                 0,
                 0,
@@ -1001,10 +1078,6 @@
                 0,
                 0,
                 0,
-                15,
-                15,
-                15,
-                15,
                 0,
                 0,
                 0,
@@ -1033,10 +1106,6 @@
                 0,
                 0,
                 0,
-                15,
-                15,
-                15,
-                15,
                 0,
                 0,
                 0,
@@ -1065,9 +1134,6 @@
                 0,
                 0,
                 0,
-                15,
-                15,
-                15,
                 0,
                 0,
                 0,
@@ -1098,9 +1164,6 @@
                 0,
                 0,
                 0,
-                15,
-                15,
-                15,
                 0,
                 0,
                 0,
@@ -1129,10 +1192,7 @@
                 0,
                 0,
                 0,
-                15,
-                15,
                 0,
-                15,
                 0,
                 0,
                 0,
@@ -1161,10 +1221,7 @@
                 0,
                 0,
                 0,
-                15,
-                15,
                 0,
-                15,
                 0,
                 0,
                 0,
@@ -1193,9 +1250,6 @@
                 0,
                 0,
                 0,
-                15,
-                15,
-                15,
                 0,
                 0,
                 0,
@@ -1226,39 +1280,12 @@
                 0,
                 0,
                 0,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
-                15,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
                 0,
                 0,
                 0,
@@ -1515,8 +1542,8 @@
                             "id": "343caad0-6819-4051-8d85-a77e34e2bcbc",
                             "command": "EVENT_SWITCH_SCENE",
                             "args": {
-                                "x": 18,
-                                "y": 3,
+                                "x": 15,
+                                "y": 8,
                                 "direction": "down",
                                 "sceneId": "94c18861-b352-4f49-a64d-52f2e3415077",
                                 "fadeSpeed": "2"
@@ -3676,7 +3703,7 @@
                     "command": "EVENT_ACTOR_HIDE",
                     "args": {
                         "actorId": "player",
-                        "__collapse": true
+                        "__collapse": false
                     }
                 },
                 {
@@ -3775,7 +3802,7 @@
                                             "command": "EVENT_SWITCH_SCENE",
                                             "args": {
                                                 "sceneId": "94c18861-b352-4f49-a64d-52f2e3415077",
-                                                "x": 24,
+                                                "x": 15,
                                                 "y": 16,
                                                 "direction": "left",
                                                 "fadeSpeed": "4"
@@ -4107,7 +4134,7 @@
                             "args": {
                                 "sceneId": "94c18861-b352-4f49-a64d-52f2e3415077",
                                 "x": 27,
-                                "y": 17,
+                                "y": 19,
                                 "direction": "down",
                                 "fadeSpeed": "2"
                             }
@@ -5622,7 +5649,7 @@
             "imageHeight": 144,
             "filename": "cave.png",
             "inode": "5348024559183267",
-            "_v": 1607123980543
+            "_v": 1607192927846
         },
         {
             "id": "b340b9a2-2865-4e05-91c0-148846a693c8",
@@ -5633,7 +5660,7 @@
             "imageHeight": 144,
             "filename": "house.png",
             "inode": "5348024559183268",
-            "_v": 1607123980543
+            "_v": 1607192927846
         },
         {
             "id": "f8b1c7ad-7bb2-44b2-8189-175ae8698f11",
@@ -5644,7 +5671,7 @@
             "imageHeight": 144,
             "filename": "logo.png",
             "inode": "3377699722208677",
-            "_v": 1607123980543
+            "_v": 1607192927846
         },
         {
             "id": "b49ea566-b022-478c-979d-ec3ee255fdc5",
@@ -5655,7 +5682,7 @@
             "imageHeight": 144,
             "filename": "menu.png",
             "inode": "2251799815366060",
-            "_v": 1607123980543
+            "_v": 1607192927846
         },
         {
             "id": "1b7fa267-d716-40f0-b0d0-f4f966610e07",
@@ -5665,8 +5692,8 @@
             "imageWidth": 256,
             "imageHeight": 256,
             "filename": "outside.png",
-            "inode": "2814749767341075",
-            "_v": 1607133472453
+            "inode": "10696049115394083",
+            "_v": 1607196983104
         },
         {
             "id": "40fda058-df90-4205-a239-fe77bce4fa79",
@@ -5677,7 +5704,7 @@
             "imageHeight": 256,
             "filename": "stars.png",
             "inode": "2533274792076733",
-            "_v": 1607123980543
+            "_v": 1607192927846
         },
         {
             "id": "f047ff0e-58ad-49fc-bd2b-ec84fc1f7ab3",
@@ -5688,7 +5715,7 @@
             "imageHeight": 144,
             "filename": "titlescreen.png",
             "inode": "2251799815366082",
-            "_v": 1607123980543
+            "_v": 1607192927846
         },
         {
             "id": "e5617ab9-e8e9-43bb-90a1-a5c3a8400afc",
@@ -5699,7 +5726,7 @@
             "imageHeight": 144,
             "filename": "titlescreen_test1.png",
             "inode": "2251799815366083",
-            "_v": 1607123980543
+            "_v": 1607192927846
         },
         {
             "id": "f3102db4-2273-411d-b33f-4d6f65959c60",
@@ -5710,10 +5737,37 @@
             "imageHeight": 256,
             "filename": "underground.png",
             "inode": "2533274792076741",
-            "_v": 1607123980543
+            "_v": 1607192927846
         }
     ],
     "spriteSheets": [
+        {
+            "id": "6d33651d-9145-42b0-8625-c48e5029ceaf",
+            "name": "actor",
+            "numFrames": 3,
+            "type": "actor",
+            "filename": "actor.png",
+            "inode": "844424930325810",
+            "_v": 1607192927846
+        },
+        {
+            "id": "0efb7b01-8dbe-47eb-ab34-2fc087937211",
+            "name": "actor_animated",
+            "numFrames": 6,
+            "type": "actor_animated",
+            "filename": "actor_animated.png",
+            "inode": "844424930325811",
+            "_v": 1607192927846
+        },
+        {
+            "id": "f94fa957-8199-4cec-a24a-15f66649ebe7",
+            "name": "bat",
+            "numFrames": 3,
+            "type": "actor",
+            "filename": "bat.png",
+            "inode": "3940649674137303",
+            "_v": 1607198430549
+        },
         {
             "id": "1e27bb8e-c805-435a-8b87-05b4f50da4f0",
             "name": "cat",
@@ -5721,7 +5775,7 @@
             "type": "static",
             "filename": "cat.png",
             "inode": "3096224745501074",
-            "_v": 1607123980543
+            "_v": 1607192927846
         },
         {
             "id": "f0c3033d-e82a-407d-9fe2-3d5da4f59c09",
@@ -5730,7 +5784,7 @@
             "type": "actor",
             "filename": "checkbox.png",
             "inode": "2814749768790444",
-            "_v": 1607123980543
+            "_v": 1607192927846
         },
         {
             "id": "17219846-cda9-4e84-bdfa-c3ff105d42cc",
@@ -5739,7 +5793,7 @@
             "type": "static",
             "filename": "dog.png",
             "inode": "3377699722211768",
-            "_v": 1607123980543
+            "_v": 1607192927846
         },
         {
             "id": "ede130e6-013a-42d1-a786-1aed3fd3cf32",
@@ -5748,7 +5802,7 @@
             "type": "animated",
             "filename": "duck.png",
             "inode": "3659174698922428",
-            "_v": 1607123980543
+            "_v": 1607192927846
         },
         {
             "id": "f2610e3c-8ff9-42fa-a9bb-d1591031fa17",
@@ -5757,7 +5811,43 @@
             "type": "animated",
             "filename": "fire.png",
             "inode": "3659174698922430",
-            "_v": 1607123980543
+            "_v": 1607192927846
+        },
+        {
+            "id": "75cf8080-073e-4a7b-828c-50ee82e8d02d",
+            "name": "full",
+            "numFrames": 6,
+            "type": "actor_animated",
+            "filename": "full.png",
+            "inode": "1970324837168389",
+            "_v": 1607192927846
+        },
+        {
+            "id": "50d31b4e-c47c-4165-855b-0e8ce876e8dc",
+            "name": "guard",
+            "numFrames": 6,
+            "type": "actor_animated",
+            "filename": "guard.png",
+            "inode": "4222124652334478",
+            "_v": 1607199250399
+        },
+        {
+            "id": "07f828fc-a79f-412b-9fd8-d7dd58997024",
+            "name": "half",
+            "numFrames": 6,
+            "type": "actor_animated",
+            "filename": "half.png",
+            "inode": "844424930325781",
+            "_v": 1607192927846
+        },
+        {
+            "id": "46658393-fef1-4e5d-a2b9-1b2830f5fbde",
+            "name": "hurt",
+            "numFrames": 3,
+            "type": "actor",
+            "filename": "hurt.png",
+            "inode": "844424930325782",
+            "_v": 1607192927850
         },
         {
             "id": "09ad70c6-3ce5-4b97-9e96-466221418a45",
@@ -5766,7 +5856,7 @@
             "type": "static",
             "filename": "ice.png",
             "inode": "2533274792079809",
-            "_v": 1607123980543
+            "_v": 1607192927846
         },
         {
             "id": "dfa75239-299d-41fe-a6cd-9e9438da1938",
@@ -5775,7 +5865,7 @@
             "type": "actor",
             "filename": "npc001.png",
             "inode": "3940649675633091",
-            "_v": 1607123980543
+            "_v": 1607192927846
         },
         {
             "id": "40dcd163-9f72-4861-8131-b01eb9baa000",
@@ -5784,25 +5874,25 @@
             "type": "actor",
             "filename": "npc002.png",
             "inode": "3096224745501141",
-            "_v": 1607123980543
+            "_v": 1607192927847
         },
         {
-            "id": "52ad34df-f245-4b2a-b94c-a82af1002871",
-            "name": "npc003",
-            "numFrames": 6,
-            "type": "actor_animated",
-            "filename": "npc003.png",
-            "inode": "3096224745501159",
-            "_v": 1607123980543
-        },
-        {
-            "id": "ac1e8ef4-ffe6-47cd-b16f-9af5da77ec26",
+            "id": "d8c68742-388a-45b2-94ae-1b27ece2cdff",
             "name": "player",
             "numFrames": 6,
             "type": "actor_animated",
             "filename": "player.png",
-            "inode": "3659174698922481",
-            "_v": 1607123980543
+            "inode": "4503599629045130",
+            "_v": 1607199242017
+        },
+        {
+            "id": "3aa670d5-671c-4495-bd60-b5c705e359f6",
+            "name": "player_OLD",
+            "numFrames": 6,
+            "type": "actor_animated",
+            "filename": "player_OLD.png",
+            "inode": "27584547717736277",
+            "_v": 1607199495611
         },
         {
             "id": "a0442b6a-634f-44da-9962-77938e3ed839",
@@ -5811,7 +5901,7 @@
             "type": "static",
             "filename": "radio.png",
             "inode": "4503599629054453",
-            "_v": 1607123980543
+            "_v": 1607192927847
         },
         {
             "id": "3939e8d2-3987-4a22-953e-f1d82134eccf",
@@ -5820,7 +5910,7 @@
             "type": "static",
             "filename": "rock.png",
             "inode": "2814749768790522",
-            "_v": 1607123980543
+            "_v": 1607192927847
         },
         {
             "id": "e20ce140-53a5-4b1b-9964-138ba0c86925",
@@ -5829,7 +5919,7 @@
             "type": "static",
             "filename": "sage.png",
             "inode": "2533274792079887",
-            "_v": 1607123980543
+            "_v": 1607192927847
         },
         {
             "id": "000a6dde-cb60-436e-b357-30a529daa139",
@@ -5838,7 +5928,7 @@
             "type": "animated",
             "filename": "savepoint.png",
             "inode": "2533274792079889",
-            "_v": 1607123980543
+            "_v": 1607192927847
         },
         {
             "id": "30b8266a-0533-4f90-bd33-e97dc1d498ea",
@@ -5847,7 +5937,16 @@
             "type": "static",
             "filename": "signpost.png",
             "inode": "2533274792079890",
-            "_v": 1607123980543
+            "_v": 1607192927847
+        },
+        {
+            "id": "30b30f09-7c1e-4061-b42e-25f2dfd03178",
+            "name": "static",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "static.png",
+            "inode": "844424930325817",
+            "_v": 1607192927854
         },
         {
             "id": "e9e61bf7-88fd-491d-ae01-4b7f76909108",
@@ -5856,7 +5955,16 @@
             "type": "static",
             "filename": "torch.png",
             "inode": "3377699722211860",
-            "_v": 1607123980543
+            "_v": 1607192927847
+        },
+        {
+            "id": "b3ac5df4-ac42-4db4-88c4-5cd7453785e4",
+            "name": "wolf",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "wolf.png",
+            "inode": "4222124650707337",
+            "_v": 1607198994597
         }
     ],
     "palettes": [
@@ -6005,7 +6113,7 @@
             "filename": "Opening_Theme.mod",
             "settings": {},
             "inode": "2251799815366107",
-            "_v": 1607123980536
+            "_v": 1607192927816
         },
         {
             "id": "f50428ab-a084-4591-9bba-2ba10fe7b1c6",
@@ -6015,7 +6123,7 @@
                 "disableSpeedConversion": false
             },
             "inode": "3659174698919390",
-            "_v": 1607123980537
+            "_v": 1607192927816
         }
     ],
     "variables": [
@@ -6078,9 +6186,9 @@
         "startY": 0,
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 1340,
-        "worldScrollY": 980,
-        "zoom": 375,
+        "worldScrollX": 84,
+        "worldScrollY": 47,
+        "zoom": 125,
         "customColorsEnabled": false,
         "defaultBackgroundPaletteIds": [
             "default-bg-1",
@@ -6095,6 +6203,6 @@
         "defaultFadeStyle": "white",
         "startMapId": "cb5e225f-e996-4ca8-b068-09a12ec18b75",
         "startDirection": "right",
-        "playerSpriteSheetId": "ac1e8ef4-ffe6-47cd-b16f-9af5da77ec26"
+        "playerSpriteSheetId": "d8c68742-388a-45b2-94ae-1b27ece2cdff"
     }
 }
