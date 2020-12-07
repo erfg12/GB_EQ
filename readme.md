@@ -9,3 +9,9 @@ Built with GB Studio 2.0.0 Beta 4
 1) Open the image in Photoshop. Click Image > Mode > Index > Load Swatch > `gb-studio-photoshop no-transparent.aco` (It's the GB Studio colors without the transparent color).
 2) You can now import the image to your scene, by switching Mode to RGB.
 NOTE: Try not to reduce the image size once the swatch is applied as it may merge and change the colors. Apply size changes prior to the swatch color index.
+
+## How To Get EQ Zone Models
+Download EQZoneViewer http://eqclassic.de/wiki/EverQuest_Zone_Viewer and uncheck models you want to hide and click the top left button to hide terrain.
+
+## How To Get EQ Character Models
+Some models are viewable at http://eqtools.eqemu.io
