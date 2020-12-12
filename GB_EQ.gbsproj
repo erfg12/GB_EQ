@@ -2388,6 +2388,103 @@
                     }
                 },
                 {
+                    "id": "cfc5e8bc-47ba-4490-92da-f398ed3a4ff6",
+                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                    "args": {
+                        "customEventId": "baddc7ec-5061-43d3-b98f-c18b77e38fad",
+                        "__name": "Level Up Check",
+                        "__collapse": false,
+                        "$variable[0]$": "14",
+                        "$variable[1]$": "L2",
+                        "$variable[2]$": "13"
+                    },
+                    "children": {
+                        "script": [
+                            {
+                                "id": "3925cc6c-7e4a-4a50-ab4a-0ba0924dfff1",
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "1",
+                                    "value": {
+                                        "type": "variable",
+                                        "value": "2"
+                                    }
+                                }
+                            },
+                            {
+                                "id": "2464356b-5620-4f12-b9ab-ba5835a17f1e",
+                                "command": "EVENT_VARIABLE_MATH",
+                                "args": {
+                                    "vectorX": "1",
+                                    "operation": "mul",
+                                    "other": "val",
+                                    "vectorY": "0",
+                                    "value": 4,
+                                    "minValue": "0",
+                                    "maxValue": "255",
+                                    "clamp": false
+                                }
+                            },
+                            {
+                                "id": "25f1e0e2-435e-4816-81fd-e447b5d037ff",
+                                "command": "EVENT_IF_VALUE_COMPARE",
+                                "args": {
+                                    "vectorX": "0",
+                                    "operator": ">=",
+                                    "vectorY": "1",
+                                    "__collapseElse": false
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "id": "4ab09139-e7dd-4959-8680-afaea46e1a53",
+                                            "command": "EVENT_TEXT",
+                                            "args": {
+                                                "text": [
+                                                    "You have leveled\nup!"
+                                                ],
+                                                "avatarId": ""
+                                            }
+                                        },
+                                        {
+                                            "id": "4c5bfa18-aa73-4ecb-a51f-c3160a61d771",
+                                            "command": "EVENT_INC_VALUE",
+                                            "args": {
+                                                "variable": "2"
+                                            }
+                                        },
+                                        {
+                                            "id": "a6e84970-5acd-4c11-a79e-5c3d5bad2cca",
+                                            "command": "EVENT_SET_VALUE",
+                                            "args": {
+                                                "variable": "0",
+                                                "value": {
+                                                    "type": "number",
+                                                    "value": 0
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "id": "4d5ae23f-89f6-4a9c-b5c0-44e3cd6f4e44",
+                                            "command": "EVENT_END"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "id": "5819a661-cbb2-4c11-916a-fc136a72cd37",
+                                            "command": "EVENT_END"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "id": "e39311a8-30bf-4046-a63f-cb4f14cc9333",
+                                "command": "EVENT_END"
+                            }
+                        ]
+                    }
+                },
+                {
                     "id": "175b3c54-9c2a-4ab4-b3ae-ffaab07cb175",
                     "command": "EVENT_IF_VALUE",
                     "args": {
@@ -2464,7 +2561,7 @@
                         "$actor[0]$": "4dd11a72-7aef-4b27-858e-22cd1376bc86",
                         "$actor[1]$": "ab8fbf0f-d2c3-4875-aea5-9be50588863b",
                         "$actor[2]$": "76ffc333-4d3b-4070-8dd3-ab4f407f6c8c",
-                        "__collapse": false,
+                        "__collapse": true,
                         "$variable[2]$": "6"
                     },
                     "children": {
@@ -8144,8 +8241,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "cave.png",
-            "inode": "14918173765823853",
-            "_v": 1607714565782
+            "inode": "281474979136351",
+            "_v": 1607742744313
         },
         {
             "id": "2939cc61-d814-4406-8907-6863e339fd5d",
@@ -8155,8 +8252,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "combat_bat.png",
-            "inode": "37436171902535526",
-            "_v": 1607714565782
+            "inode": "281474979136352",
+            "_v": 1607742744314
         },
         {
             "id": "0a8afe1c-eacd-4a09-a034-d881a5b222ce",
@@ -8166,8 +8263,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "combat_spider.png",
-            "inode": "39969446692931573",
-            "_v": 1607714565782
+            "inode": "281474979136353",
+            "_v": 1607742744314
         },
         {
             "id": "4603d36c-19c3-441e-9626-c60981bdba12",
@@ -8177,8 +8274,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "combat_wasp.png",
-            "inode": "16044073672526242",
-            "_v": 1607714565782
+            "inode": "281474979136354",
+            "_v": 1607742744314
         },
         {
             "id": "b340b9a2-2865-4e05-91c0-148846a693c8",
@@ -8188,8 +8285,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "house.png",
-            "inode": "14918173765823970",
-            "_v": 1607714565782
+            "inode": "281474979136355",
+            "_v": 1607742744314
         },
         {
             "id": "f8b1c7ad-7bb2-44b2-8189-175ae8698f11",
@@ -8199,8 +8296,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "logo.png",
-            "inode": "20266198323326436",
-            "_v": 1607714565782
+            "inode": "281474979136356",
+            "_v": 1607742744314
         },
         {
             "id": "b49ea566-b022-478c-979d-ec3ee255fdc5",
@@ -8210,8 +8307,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "menu.png",
-            "inode": "53480245575036394",
-            "_v": 1607714565782
+            "inode": "281474979136357",
+            "_v": 1607742744314
         },
         {
             "id": "1b7fa267-d716-40f0-b0d0-f4f966610e07",
@@ -8221,8 +8318,8 @@
             "imageWidth": 256,
             "imageHeight": 256,
             "filename": "outside.png",
-            "inode": "11258999068585501",
-            "_v": 1607714565782
+            "inode": "281474979136358",
+            "_v": 1607742744314
         },
         {
             "id": "40fda058-df90-4205-a239-fe77bce4fa79",
@@ -8232,8 +8329,8 @@
             "imageWidth": 256,
             "imageHeight": 256,
             "filename": "stars.png",
-            "inode": "8162774324768461",
-            "_v": 1607714565782
+            "inode": "281474979136359",
+            "_v": 1607742744314
         },
         {
             "id": "f047ff0e-58ad-49fc-bd2b-ec84fc1f7ab3",
@@ -8243,8 +8340,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "titlescreen.png",
-            "inode": "7599824371347150",
-            "_v": 1607714565782
+            "inode": "281474979136360",
+            "_v": 1607742744314
         },
         {
             "id": "e5617ab9-e8e9-43bb-90a1-a5c3a8400afc",
@@ -8254,8 +8351,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "titlescreen_test1.png",
-            "inode": "8162774324768463",
-            "_v": 1607714565782
+            "inode": "281474979136361",
+            "_v": 1607742744314
         },
         {
             "id": "f3102db4-2273-411d-b33f-4d6f65959c60",
@@ -8265,8 +8362,8 @@
             "imageWidth": 256,
             "imageHeight": 256,
             "filename": "underground.png",
-            "inode": "8162774324768491",
-            "_v": 1607714565783
+            "inode": "281474979136362",
+            "_v": 1607742744314
         }
     ],
     "spriteSheets": [
@@ -8276,8 +8373,8 @@
             "numFrames": 3,
             "type": "actor",
             "filename": "actor.png",
-            "inode": "12384898975428536",
-            "_v": 1607714565782
+            "inode": "281474979136367",
+            "_v": 1607742744314
         },
         {
             "id": "0efb7b01-8dbe-47eb-ab34-2fc087937211",
@@ -8285,8 +8382,8 @@
             "numFrames": 6,
             "type": "actor_animated",
             "filename": "actor_animated.png",
-            "inode": "9007199254900666",
-            "_v": 1607714565783
+            "inode": "281474979136368",
+            "_v": 1607742744314
         },
         {
             "id": "f94fa957-8199-4cec-a24a-15f66649ebe7",
@@ -8294,8 +8391,8 @@
             "numFrames": 3,
             "type": "actor",
             "filename": "bat.png",
-            "inode": "9288674231611329",
-            "_v": 1607714565783
+            "inode": "281474979136369",
+            "_v": 1607742744314
         },
         {
             "id": "2bdd7e6c-58f2-42d8-af73-d0b586ecda3e",
@@ -8303,8 +8400,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "bat_single.png",
-            "inode": "115686215428111340",
-            "_v": 1607714565783
+            "inode": "281474979136370",
+            "_v": 1607742744314
         },
         {
             "id": "1e27bb8e-c805-435a-8b87-05b4f50da4f0",
@@ -8312,8 +8409,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "cat.png",
-            "inode": "16325548649377916",
-            "_v": 1607714565783
+            "inode": "281474979136371",
+            "_v": 1607742744314
         },
         {
             "id": "f0c3033d-e82a-407d-9fe2-3d5da4f59c09",
@@ -8321,8 +8418,8 @@
             "numFrames": 3,
             "type": "actor",
             "filename": "checkbox.png",
-            "inode": "5910974511083656",
-            "_v": 1607714565783
+            "inode": "281474979136372",
+            "_v": 1607742744314
         },
         {
             "id": "e2b837e9-d1a3-493b-bb10-65cb0cc0e6bb",
@@ -8330,8 +8427,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "digit-eight.png",
-            "inode": "88946092640586435",
-            "_v": 1607714565783
+            "inode": "281474979136373",
+            "_v": 1607742744314
         },
         {
             "id": "cb086f88-c5ff-4195-8214-1a1b1d5c8b2f",
@@ -8339,8 +8436,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "digit-five.png",
-            "inode": "147211412819692366",
-            "_v": 1607714565783
+            "inode": "281474979136374",
+            "_v": 1607742744314
         },
         {
             "id": "17f488f1-96cb-4d25-a804-089c2c57cabf",
@@ -8348,8 +8445,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "digit-four.png",
-            "inode": "43628621390171008",
-            "_v": 1607714565783
+            "inode": "281474979136375",
+            "_v": 1607742744314
         },
         {
             "id": "81e3f0e2-124b-4ea2-b5f7-9ad7d48e1c8b",
@@ -8357,8 +8454,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "digit-nine.png",
-            "inode": "21110623253319104",
-            "_v": 1607714565783
+            "inode": "281474979136376",
+            "_v": 1607742744314
         },
         {
             "id": "88d9bf04-702c-42db-a603-b75fee291ed5",
@@ -8366,8 +8463,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "digit-one.png",
-            "inode": "235876030483549687",
-            "_v": 1607714565783
+            "inode": "281474979136377",
+            "_v": 1607742744314
         },
         {
             "id": "dc6f4e7c-c594-4f71-8d20-b9fcc24c885e",
@@ -8375,8 +8472,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "digit-seven.png",
-            "inode": "17732923532791340",
-            "_v": 1607714565783
+            "inode": "281474979136378",
+            "_v": 1607742744314
         },
         {
             "id": "fc53b395-d65e-4a47-a552-e69e40575396",
@@ -8384,8 +8481,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "digit-six.png",
-            "inode": "103301316452830845",
-            "_v": 1607714565783
+            "inode": "281474979136379",
+            "_v": 1607742744314
         },
         {
             "id": "ceff9c82-f847-44a2-ad7a-eaf086d23321",
@@ -8393,8 +8490,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "digit-three.png",
-            "inode": "125819314589683398",
-            "_v": 1607714565783
+            "inode": "281474979136380",
+            "_v": 1607742744314
         },
         {
             "id": "dd8cb389-2f15-4e53-b042-a15bf74f82c6",
@@ -8402,8 +8499,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "digit-two.png",
-            "inode": "41658296553197276",
-            "_v": 1607714565783
+            "inode": "281474979136381",
+            "_v": 1607742744314
         },
         {
             "id": "ed44cfbf-ae94-459f-a5e8-982528f0df6f",
@@ -8411,8 +8508,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "digit-zero.png",
-            "inode": "25332747903980319",
-            "_v": 1607714565783
+            "inode": "281474979136382",
+            "_v": 1607742744314
         },
         {
             "id": "17219846-cda9-4e84-bdfa-c3ff105d42cc",
@@ -8420,8 +8517,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "dog.png",
-            "inode": "7881299348058266",
-            "_v": 1607714565783
+            "inode": "281474979136383",
+            "_v": 1607742744314
         },
         {
             "id": "ede130e6-013a-42d1-a786-1aed3fd3cf32",
@@ -8429,8 +8526,8 @@
             "numFrames": 2,
             "type": "animated",
             "filename": "duck.png",
-            "inode": "28428972647936191",
-            "_v": 1607714565783
+            "inode": "281474979136384",
+            "_v": 1607742744314
         },
         {
             "id": "f2610e3c-8ff9-42fa-a9bb-d1591031fa17",
@@ -8438,8 +8535,8 @@
             "numFrames": 4,
             "type": "animated",
             "filename": "fire.png",
-            "inode": "9851624185032933",
-            "_v": 1607714565783
+            "inode": "281474979136385",
+            "_v": 1607742744314
         },
         {
             "id": "50d31b4e-c47c-4165-855b-0e8ce876e8dc",
@@ -8447,8 +8544,8 @@
             "numFrames": 6,
             "type": "actor_animated",
             "filename": "guard.png",
-            "inode": "5910974511083769",
-            "_v": 1607714565783
+            "inode": "281474979136386",
+            "_v": 1607742744314
         },
         {
             "id": "28a894c3-9c95-4277-9651-28e19b5dd9ae",
@@ -8456,8 +8553,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "healthbar.png",
-            "inode": "21955048183883767",
-            "_v": 1607714565783
+            "inode": "281474979136387",
+            "_v": 1607742744314
         },
         {
             "id": "2e1a8e6e-5e33-4052-9cf6-b1d4fd76b83c",
@@ -8465,8 +8562,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "hp_label.png",
-            "inode": "70087269200985366",
-            "_v": 1607714565783
+            "inode": "281474979136388",
+            "_v": 1607742744314
         },
         {
             "id": "46658393-fef1-4e5d-a2b9-1b2830f5fbde",
@@ -8474,8 +8571,8 @@
             "numFrames": 3,
             "type": "actor",
             "filename": "hurt.png",
-            "inode": "12666373952139516",
-            "_v": 1607714565783
+            "inode": "281474979136389",
+            "_v": 1607742744314
         },
         {
             "id": "09ad70c6-3ce5-4b97-9e96-466221418a45",
@@ -8483,8 +8580,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "ice.png",
-            "inode": "7036874417926400",
-            "_v": 1607714565783
+            "inode": "281474979136390",
+            "_v": 1607742744314
         },
         {
             "id": "dfa75239-299d-41fe-a6cd-9e9438da1938",
@@ -8492,8 +8589,8 @@
             "numFrames": 3,
             "type": "actor",
             "filename": "npc001.png",
-            "inode": "8725724278190491",
-            "_v": 1607714565783
+            "inode": "281474979136391",
+            "_v": 1607742744314
         },
         {
             "id": "40dcd163-9f72-4861-8131-b01eb9baa000",
@@ -8501,8 +8598,8 @@
             "numFrames": 3,
             "type": "actor",
             "filename": "npc002.png",
-            "inode": "18858823439774121",
-            "_v": 1607714565783
+            "inode": "281474979136392",
+            "_v": 1607742744314
         },
         {
             "id": "bf1277e6-0ad4-4340-b4b5-aca9582e77ef",
@@ -8510,8 +8607,8 @@
             "numFrames": 10,
             "type": "animated",
             "filename": "number-array.png",
-            "inode": "3940649673970537",
-            "_v": 1607714565783
+            "inode": "281474979136393",
+            "_v": 1607742744314
         },
         {
             "id": "d8c68742-388a-45b2-94ae-1b27ece2cdff",
@@ -8519,8 +8616,8 @@
             "numFrames": 6,
             "type": "actor_animated",
             "filename": "player.png",
-            "inode": "7599824371347990",
-            "_v": 1607714565783
+            "inode": "281474979136394",
+            "_v": 1607742744314
         },
         {
             "id": "3aa670d5-671c-4495-bd60-b5c705e359f6",
@@ -8528,8 +8625,8 @@
             "numFrames": 6,
             "type": "actor_animated",
             "filename": "player_OLD.png",
-            "inode": "10414574138454558",
-            "_v": 1607714565783
+            "inode": "281474979136395",
+            "_v": 1607742744314
         },
         {
             "id": "a0442b6a-634f-44da-9962-77938e3ed839",
@@ -8537,8 +8634,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "radio.png",
-            "inode": "9007199254901279",
-            "_v": 1607714565783
+            "inode": "281474979136396",
+            "_v": 1607742744314
         },
         {
             "id": "3939e8d2-3987-4a22-953e-f1d82134eccf",
@@ -8546,8 +8643,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "rock.png",
-            "inode": "12103423998718498",
-            "_v": 1607714565783
+            "inode": "281474979136397",
+            "_v": 1607742744314
         },
         {
             "id": "e20ce140-53a5-4b1b-9964-138ba0c86925",
@@ -8555,8 +8652,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "sage.png",
-            "inode": "12103423998718773",
-            "_v": 1607714565783
+            "inode": "281474979136398",
+            "_v": 1607742744314
         },
         {
             "id": "000a6dde-cb60-436e-b357-30a529daa139",
@@ -8564,8 +8661,8 @@
             "numFrames": 2,
             "type": "animated",
             "filename": "savepoint.png",
-            "inode": "9851624185033528",
-            "_v": 1607714565783
+            "inode": "281474979136399",
+            "_v": 1607742744314
         },
         {
             "id": "30b8266a-0533-4f90-bd33-e97dc1d498ea",
@@ -8573,8 +8670,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "signpost.png",
-            "inode": "162974011515631710",
-            "_v": 1607714565783
+            "inode": "281474979136400",
+            "_v": 1607742744314
         },
         {
             "id": "2e2fe329-ca9b-4dce-82df-d672b86dddee",
@@ -8582,8 +8679,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "spider.png",
-            "inode": "4503599627577371",
-            "_v": 1607714565783
+            "inode": "281474979136401",
+            "_v": 1607742744314
         },
         {
             "id": "30b30f09-7c1e-4061-b42e-25f2dfd03178",
@@ -8591,8 +8688,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "static.png",
-            "inode": "12384898975477207",
-            "_v": 1607714565783
+            "inode": "281474979136402",
+            "_v": 1607742744314
         },
         {
             "id": "e9e61bf7-88fd-491d-ae01-4b7f76909108",
@@ -8600,8 +8697,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "torch.png",
-            "inode": "12103423998839134",
-            "_v": 1607714565783
+            "inode": "281474979136403",
+            "_v": 1607742744314
         },
         {
             "id": "fa9b9106-2a07-488e-a65c-30ec49eb8344",
@@ -8609,8 +8706,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "wasp.png",
-            "inode": "18577348463233338",
-            "_v": 1607714565783
+            "inode": "281474979136404",
+            "_v": 1607742744314
         },
         {
             "id": "fcf298da-907b-4b11-893f-4d09b4136d30",
@@ -8618,8 +8715,8 @@
             "numFrames": 2,
             "type": "animated",
             "filename": "wasp_anim.png",
-            "inode": "52917295621642187",
-            "_v": 1607714565783
+            "inode": "281474979136405",
+            "_v": 1607742744314
         },
         {
             "id": "b3ac5df4-ac42-4db4-88c4-5cd7453785e4",
@@ -8627,8 +8724,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "wolf.png",
-            "inode": "5910974511315598",
-            "_v": 1607714565783
+            "inode": "281474979136406",
+            "_v": 1607742744314
         }
     ],
     "palettes": [
@@ -10234,6 +10331,109 @@
                     "command": "EVENT_END"
                 }
             ]
+        },
+        {
+            "id": "baddc7ec-5061-43d3-b98f-c18b77e38fad",
+            "name": "Level Up Check",
+            "description": "Check if we reached our required XP to lvl up.",
+            "variables": {
+                "0": {
+                    "id": "0",
+                    "name": "Current XP"
+                },
+                "1": {
+                    "id": "1",
+                    "name": "XP Till LVL"
+                },
+                "2": {
+                    "id": "2",
+                    "name": "Player Level"
+                }
+            },
+            "actors": {},
+            "script": [
+                {
+                    "id": "3925cc6c-7e4a-4a50-ab4a-0ba0924dfff1",
+                    "command": "EVENT_SET_VALUE",
+                    "args": {
+                        "variable": "1",
+                        "value": {
+                            "type": "variable",
+                            "value": "2"
+                        }
+                    }
+                },
+                {
+                    "id": "2464356b-5620-4f12-b9ab-ba5835a17f1e",
+                    "command": "EVENT_VARIABLE_MATH",
+                    "args": {
+                        "vectorX": "1",
+                        "operation": "mul",
+                        "other": "val",
+                        "vectorY": "0",
+                        "value": 4,
+                        "minValue": "0",
+                        "maxValue": "255",
+                        "clamp": false
+                    }
+                },
+                {
+                    "id": "25f1e0e2-435e-4816-81fd-e447b5d037ff",
+                    "command": "EVENT_IF_VALUE_COMPARE",
+                    "args": {
+                        "vectorX": "0",
+                        "operator": ">=",
+                        "vectorY": "1",
+                        "__collapseElse": false
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "id": "4ab09139-e7dd-4959-8680-afaea46e1a53",
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "You have leveled\nup!"
+                                    ],
+                                    "avatarId": ""
+                                }
+                            },
+                            {
+                                "id": "4c5bfa18-aa73-4ecb-a51f-c3160a61d771",
+                                "command": "EVENT_INC_VALUE",
+                                "args": {
+                                    "variable": "2"
+                                }
+                            },
+                            {
+                                "id": "a6e84970-5acd-4c11-a79e-5c3d5bad2cca",
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "0",
+                                    "value": {
+                                        "type": "number",
+                                        "value": 0
+                                    }
+                                }
+                            },
+                            {
+                                "id": "4d5ae23f-89f6-4a9c-b5c0-44e3cd6f4e44",
+                                "command": "EVENT_END"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "id": "5819a661-cbb2-4c11-916a-fc136a72cd37",
+                                "command": "EVENT_END"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "e39311a8-30bf-4046-a63f-cb4f14cc9333",
+                    "command": "EVENT_END"
+                }
+            ]
         }
     ],
     "music": [
@@ -10242,8 +10442,8 @@
             "name": "Opening_Theme",
             "filename": "Opening_Theme.mod",
             "settings": {},
-            "inode": "12384898975428494",
-            "_v": 1607714565777
+            "inode": "281474979136364",
+            "_v": 1607742744306
         },
         {
             "id": "f50428ab-a084-4591-9bba-2ba10fe7b1c6",
@@ -10252,8 +10452,8 @@
             "settings": {
                 "disableSpeedConversion": false
             },
-            "inode": "8162774324768679",
-            "_v": 1607714565778
+            "inode": "281474979136365",
+            "_v": 1607742744306
         }
     ],
     "variables": [
@@ -10448,6 +10648,10 @@
         {
             "id": "94c18861-b352-4f49-a64d-52f2e3415077__L1",
             "name": "RespawnNPC2Timer"
+        },
+        {
+            "id": "94c18861-b352-4f49-a64d-52f2e3415077__L2",
+            "name": "XP Till LVL"
         }
     ],
     "settings": {
@@ -10456,8 +10660,8 @@
         "startY": 0,
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 1550,
-        "worldScrollY": 700,
+        "worldScrollX": 1148,
+        "worldScrollY": 300,
         "zoom": 300,
         "customColorsEnabled": false,
         "defaultBackgroundPaletteIds": [
