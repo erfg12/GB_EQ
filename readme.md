@@ -15,3 +15,8 @@ Download EQZoneViewer http://eqclassic.de/wiki/EverQuest_Zone_Viewer and uncheck
 
 ## How To Get EQ Character Models
 Some models are viewable at http://eqtools.eqemu.io
+
+## MuseScore
+1) Click Format > Styles, Uncheck Hide Instrument if 1 instrument is present. Double click on the instrument.
+2) Change instrument to Electronic > Sci-Fi Synthesizer.
+3) Change instrument pitch range to C1-C3. Export as midi.
