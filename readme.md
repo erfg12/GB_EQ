@@ -13,7 +13,7 @@ Download [EQZoneViewer](http://eqclassic.de/wiki/EverQuest_Zone_Viewer) and unch
 Some models are viewable at http://eqtools.eqemu.io
 
 ## Using MuseScore to Make Sound & Music
-Download [MuseScore](https://musescore.org).
+Download [MuseScore](https://musescore.org) and [OpenMPT](https://openmpt.org/).
 1) Click Format > Styles, Uncheck Hide Instrument if 1 instrument is present. Double click on the instrument.
 2) Change instrument to Electronic > Sci-Fi Synthesizer.
 3) Change instrument pitch range to C1-C3. Export as midi.
