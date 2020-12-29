@@ -1,5 +1,5 @@
 # About GB EQ
-A fun project to re-create EverQuest elements in a new GameBoy game. Built specifically with [GB Studio 2.0.0 Beta 4](https://www.gbstudio.dev/). I personally have NO artistic talent, so drawing sprites is a huge problem. I mostly convert the models into images, then to the GameBoy's color palette. 
+A fun project to re-create EverQuest elements in a new GameBoy game. Built specifically with [GB Studio 2.0.0 Beta 4](https://www.gbstudio.dev/). I personally have NO artistic talent, so drawing sprites is a huge problem. I mostly convert the models into images, then to the GameBoy's color palette. Same with the music and sound. They are very restricted to the instruments and sounds allowed on the plateform. I used MuseScore with the [EverQuest Midi Project](https://sites.google.com/site/everquestmidiproject/everquest-midi-files) along with other software. Instructions are below for all of the steps I used to create the assets.
 
 ## Using PhotoShop to Convert Images to GB Color Palette
 1) Open the image in Photoshop. Click Image > Mode > Index > Load Swatch > `gb-studio-photoshop no-transparent.aco` (It's the GB Studio colors without the transparent color).
@@ -13,6 +13,7 @@ Download [EQZoneViewer](http://eqclassic.de/wiki/EverQuest_Zone_Viewer) and unch
 Some models are viewable at http://eqtools.eqemu.io
 
 ## Using MuseScore to Make Sound & Music
+Download [MuseScore](https://musescore.org).
 1) Click Format > Styles, Uncheck Hide Instrument if 1 instrument is present. Double click on the instrument.
 2) Change instrument to Electronic > Sci-Fi Synthesizer.
 3) Change instrument pitch range to C1-C3. Export as midi.
