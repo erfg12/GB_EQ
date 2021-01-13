@@ -12,6 +12,8 @@ Download [EQZoneViewer](http://eqclassic.de/wiki/EverQuest_Zone_Viewer) and unch
 ## How To Get EQ Character Models
 Some models are viewable at http://eqtools.eqemu.io
 
+Every model is viewable using [Lantern EQ's Character Viewer](https://drive.google.com/file/d/1guO6A0CYWdfwaXTLWA056Sa0xMhApBsZ/view?usp=sharing)
+
 ## Using MuseScore to Make Sound & Music
 Download [MuseScore](https://musescore.org) and [OpenMPT](https://openmpt.org/).
 1) Click Format > Styles, Uncheck Hide Instrument if 1 instrument is present. Double click on the instrument.
