@@ -21,3 +21,6 @@ Download [MuseScore](https://musescore.org) and [OpenMPT](https://openmpt.org/).
 3) Change instrument pitch range to C1-C3. Export as midi.
 4) Open OpenMTP software, open Setup, change MIDI File Import Pattern Size to 64.
 5) Click the `File > Append MIDI` menu option and select the `project/assets/music/template.mod` file. Delete all channels except for 1-4 via General > change from 99 to 4 channels and remove everything after channel 4. Delete all content from channel 4 as this will cause screeches and beeps in the song. Save the .mod file to `project/assets/music`. If it doesn't automatically appear in GBStudio, close and re-open it.
+
+## 2D Character Sprites
+https://0x72.itch.io/2bitcharactergenerator
