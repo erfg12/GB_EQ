@@ -3955,7 +3955,8 @@
                     "id": "f1a2a3b5-e65a-4b21-93ff-c07794b756df",
                     "command": "EVENT_GROUP",
                     "args": {
-                        "__label": "Set Player Stats"
+                        "__label": "Set Player Stats",
+                        "__collapse": true
                     },
                     "children": {
                         "true": [
@@ -4051,7 +4052,8 @@
                                     "value": {
                                         "type": "number",
                                         "value": 1
-                                    }
+                                    },
+                                    "__collapse": true
                                 }
                             },
                             {
@@ -4079,7 +4081,7 @@
                     "command": "EVENT_GROUP",
                     "args": {
                         "__label": "Attach Menu",
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
@@ -4100,12 +4102,12 @@
                                             "command": "EVENT_MENU",
                                             "args": {
                                                 "variable": "17",
-                                                "items": 4,
+                                                "items": 5,
                                                 "option1": "Info",
                                                 "option2": "Stats",
                                                 "option3": "Inv.",
-                                                "option4": "Save",
-                                                "option5": "",
+                                                "option4": "Loot",
+                                                "option5": "Save",
                                                 "option6": "",
                                                 "option7": "",
                                                 "option8": "",
@@ -4128,7 +4130,8 @@
                                                 "operator": "==",
                                                 "comparator": 1,
                                                 "__collapseElse": false,
-                                                "__collapse": true
+                                                "__collapse": true,
+                                                "__label": "If Menu Select 1"
                                             },
                                             "children": {
                                                 "true": [
@@ -4165,7 +4168,8 @@
                                                 "operator": "==",
                                                 "comparator": 2,
                                                 "__collapseElse": false,
-                                                "__collapse": true
+                                                "__collapse": true,
+                                                "__label": "If Menu Select 2"
                                             },
                                             "children": {
                                                 "true": [
@@ -4202,7 +4206,8 @@
                                                 "operator": "==",
                                                 "comparator": 3,
                                                 "__collapseElse": false,
-                                                "__collapse": true
+                                                "__collapse": true,
+                                                "__label": "If Menu Select 3"
                                             },
                                             "children": {
                                                 "true": [
@@ -4225,6 +4230,74 @@
                                                 "false": [
                                                     {
                                                         "id": "af35f063-970e-41ac-a2a3-9933ae098ed2",
+                                                        "command": "EVENT_END"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "id": "1dd0954a-0c5b-4f3d-a00e-2080159a8b74",
+                                            "command": "EVENT_IF_VALUE",
+                                            "args": {
+                                                "variable": "17",
+                                                "operator": "==",
+                                                "comparator": 4,
+                                                "__collapseElse": false,
+                                                "__collapse": true,
+                                                "__label": "If Menu Select 4"
+                                            },
+                                            "children": {
+                                                "true": [
+                                                    {
+                                                        "id": "a79ac1c3-931b-4549-96d7-e4c48dbdf979",
+                                                        "command": "EVENT_SWITCH_SCENE",
+                                                        "args": {
+                                                            "sceneId": "e08dbe2a-d450-4ebf-8123-fd97e800dd91",
+                                                            "x": 0,
+                                                            "y": 0,
+                                                            "direction": "",
+                                                            "fadeSpeed": "2"
+                                                        }
+                                                    },
+                                                    {
+                                                        "id": "85d8b197-0833-4c91-9667-1e3a0c14cdc1",
+                                                        "command": "EVENT_END"
+                                                    }
+                                                ],
+                                                "false": [
+                                                    {
+                                                        "id": "ffa9e63d-52fd-44f2-852e-f076393350d7",
+                                                        "command": "EVENT_END"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "id": "9f784349-b320-4792-865e-9a6f2686a5cd",
+                                            "command": "EVENT_IF_VALUE",
+                                            "args": {
+                                                "variable": "17",
+                                                "operator": "==",
+                                                "comparator": 5,
+                                                "__collapseElse": false,
+                                                "__collapse": true,
+                                                "__label": "If Menu Select 5"
+                                            },
+                                            "children": {
+                                                "true": [
+                                                    {
+                                                        "id": "4ba93c69-9bad-4a8a-b9df-0d7f81210c04",
+                                                        "command": "EVENT_SAVE_DATA",
+                                                        "args": {}
+                                                    },
+                                                    {
+                                                        "id": "e733e825-eec1-4471-bd72-03b78a6e0cae",
+                                                        "command": "EVENT_END"
+                                                    }
+                                                ],
+                                                "false": [
+                                                    {
+                                                        "id": "d7007621-9166-4b8e-b2bd-7eaa6c486d7a",
                                                         "command": "EVENT_END"
                                                     }
                                                 ]
@@ -10979,7 +11052,7 @@
                     "command": "EVENT_GROUP",
                     "args": {
                         "__label": "Unpause (must be at very bottom)",
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "children": {
                         "true": [
@@ -23945,6 +24018,119 @@
                     "height": 30
                 }
             ]
+        },
+        {
+            "name": "Loot Scene",
+            "backgroundId": "40a3b6c3-e778-44ba-9d99-bb98e4dec91f",
+            "width": 20,
+            "height": 18,
+            "collisions": [],
+            "tileColors": [],
+            "script": [],
+            "playerHit1Script": [],
+            "playerHit2Script": [],
+            "playerHit3Script": [],
+            "id": "e08dbe2a-d450-4ebf-8123-fd97e800dd91",
+            "x": 246.24113128362447,
+            "y": 420.84306753390695,
+            "actors": [
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "bf1277e6-0ad4-4340-b4b5-aca9582e77ef",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": "1",
+                    "animSpeed": "3",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "0c261344-1b11-4db5-a90e-971cfe56e6c4",
+                    "x": 5,
+                    "y": 5
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "bf1277e6-0ad4-4340-b4b5-aca9582e77ef",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": "1",
+                    "animSpeed": "3",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "e47d21de-0359-453e-bf15-149c113a90fb",
+                    "x": 5,
+                    "y": 7
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "bf1277e6-0ad4-4340-b4b5-aca9582e77ef",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": "1",
+                    "animSpeed": "3",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "1cf343b1-0fcf-47dd-a10c-c45f20ea5094",
+                    "x": 5,
+                    "y": 9
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "bf1277e6-0ad4-4340-b4b5-aca9582e77ef",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": "1",
+                    "animSpeed": "3",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "711d9528-53af-4b39-b1ab-32d3d77b4cd2",
+                    "x": 5,
+                    "y": 11
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "bf1277e6-0ad4-4340-b4b5-aca9582e77ef",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": "1",
+                    "animSpeed": "3",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "be15258a-cceb-4e69-adfa-60fe5defe580",
+                    "x": 5,
+                    "y": 13
+                }
+            ],
+            "triggers": []
         }
     ],
     "backgrounds": [
@@ -23956,8 +24142,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "cave.png",
-            "inode": "14918173765823853",
-            "_v": 1611079298613
+            "inode": "3402907",
+            "_v": 1615845230631
         },
         {
             "id": "2939cc61-d814-4406-8907-6863e339fd5d",
@@ -23967,8 +24153,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "combat_bat.png",
-            "inode": "37717646879246182",
-            "_v": 1611079298613
+            "inode": "3402908",
+            "_v": 1615845230631
         },
         {
             "id": "fdcd4eea-84de-4b7c-92a7-1bcfe6f897ef",
@@ -23978,8 +24164,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "combat_black_wolf.png",
-            "inode": "42502721483520037",
-            "_v": 1611079298613
+            "inode": "3402909",
+            "_v": 1615845230631
         },
         {
             "id": "6e7f0657-14b8-40e1-a26d-059a2f93919b",
@@ -23989,8 +24175,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "combat_brownie.png",
-            "inode": "14355223812455408",
-            "_v": 1611079298613
+            "inode": "3402910",
+            "_v": 1615845230631
         },
         {
             "id": "8b091002-0430-4d34-9823-091df9de15e0",
@@ -24000,8 +24186,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "combat_crushbone_orc.png",
-            "inode": "18577348463115035",
-            "_v": 1611079298614
+            "inode": "3402911",
+            "_v": 1615845230631
         },
         {
             "id": "7bf47a0f-33db-4c03-b483-f846af46ed4b",
@@ -24011,8 +24197,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "combat_faerie.png",
-            "inode": "18295873486404092",
-            "_v": 1611079298614
+            "inode": "3402912",
+            "_v": 1615845230631
         },
         {
             "id": "1cd063b4-0a62-4b34-8f65-e6733102cc15",
@@ -24022,8 +24208,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "combat_female_bandit.png",
-            "inode": "174233010583929401",
-            "_v": 1611079298613
+            "inode": "3402913",
+            "_v": 1615845230631
         },
         {
             "id": "7b4f39d9-e856-4ded-b9fb-b36a2a497170",
@@ -24033,8 +24219,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "combat_female_bandit_v2.png",
-            "inode": "11821949022191759",
-            "_v": 1611079298614
+            "inode": "3402914",
+            "_v": 1615845230631
         },
         {
             "id": "80269be4-250c-4d43-a611-2be440c726b7",
@@ -24044,8 +24230,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "combat_pixie.png",
-            "inode": "10133099161795594",
-            "_v": 1611079298614
+            "inode": "3402915",
+            "_v": 1615845230631
         },
         {
             "id": "10943d61-faab-4d4b-b764-03df9369c9a2",
@@ -24055,8 +24241,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "combat_skeleton.png",
-            "inode": "123848989752900119",
-            "_v": 1611079298614
+            "inode": "3402916",
+            "_v": 1615845230631
         },
         {
             "id": "0a8afe1c-eacd-4a09-a034-d881a5b222ce",
@@ -24066,8 +24252,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "combat_spider.png",
-            "inode": "12666373952152056",
-            "_v": 1611079298614
+            "inode": "3402917",
+            "_v": 1615845230631
         },
         {
             "id": "4603d36c-19c3-441e-9626-c60981bdba12",
@@ -24077,8 +24263,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "combat_wasp.png",
-            "inode": "16325548649236898",
-            "_v": 1611079298614
+            "inode": "3402918",
+            "_v": 1615845230631
         },
         {
             "id": "ae916d06-aeeb-4fa4-9a93-52dde94761f2",
@@ -24088,8 +24274,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "felwith_right_merchants.png",
-            "inode": "186899384536020089",
-            "_v": 1611079298615
+            "inode": "3402919",
+            "_v": 1615845230631
         },
         {
             "id": "854e576f-39af-4e09-997d-1818a14d31ad",
@@ -24099,8 +24285,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "felwithe_furthest_north.png",
-            "inode": "25895697857528344",
-            "_v": 1611079298614
+            "inode": "3402920",
+            "_v": 1615845230631
         },
         {
             "id": "e6bf52e7-b648-4126-a0ae-4793ee6da47f",
@@ -24110,8 +24296,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "felwithe_left_merchants.png",
-            "inode": "39687971716351236",
-            "_v": 1611079298614
+            "inode": "3402921",
+            "_v": 1615845230631
         },
         {
             "id": "8c0f4d16-bbc2-451f-921e-b1fe6687f065",
@@ -24121,8 +24307,8 @@
             "imageWidth": 256,
             "imageHeight": 256,
             "filename": "felwithe_north_bridge.png",
-            "inode": "5348024557714966",
-            "_v": 1611079298614
+            "inode": "3402922",
+            "_v": 1615845230631
         },
         {
             "id": "a55bf055-a4d0-443f-a462-8f079e47a861",
@@ -24132,8 +24318,8 @@
             "imageWidth": 256,
             "imageHeight": 256,
             "filename": "felwithe_north_paladins.png",
-            "inode": "90634942500980388",
-            "_v": 1611079298614
+            "inode": "3402923",
+            "_v": 1615845230631
         },
         {
             "id": "dc27de7e-ac57-454f-80da-621a9245b84c",
@@ -24143,8 +24329,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "felwithe_shop.png",
-            "inode": "58828270132676916",
-            "_v": 1611079298614
+            "inode": "3402924",
+            "_v": 1615845230631
         },
         {
             "id": "f68a714b-8c4e-4986-b024-213a688517af",
@@ -24154,8 +24340,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "foest_bottom_right.png",
-            "inode": "23362423067135562",
-            "_v": 1611079298614
+            "inode": "3402925",
+            "_v": 1615845230631
         },
         {
             "id": "5518efb0-eeec-471b-8f4b-5410ba3c82f3",
@@ -24165,8 +24351,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "forest_bottom.png",
-            "inode": "38280596832800911",
-            "_v": 1611079298614
+            "inode": "3402926",
+            "_v": 1615845230631
         },
         {
             "id": "f8fb17ea-ef5c-48cc-a966-d1c5cf672d57",
@@ -24176,8 +24362,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "forest_bottom_left.png",
-            "inode": "29836347531482186",
-            "_v": 1611079298614
+            "inode": "3402927",
+            "_v": 1615845230631
         },
         {
             "id": "141e185d-7952-4fb3-b291-23da408d9746",
@@ -24187,8 +24373,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "forest_center.png",
-            "inode": "47850746040968545",
-            "_v": 1611079298614
+            "inode": "3402928",
+            "_v": 1615845230631
         },
         {
             "id": "d7fa2988-d07e-47d1-8ced-02d4913f8a90",
@@ -24198,8 +24384,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "forest_left.png",
-            "inode": "177329235327870703",
-            "_v": 1611079298614
+            "inode": "3402929",
+            "_v": 1615845230631
         },
         {
             "id": "25dc5c97-0c33-4ed9-9c42-44c8fe78e1c9",
@@ -24209,8 +24395,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "forest_right.png",
-            "inode": "21673573206878767",
-            "_v": 1611079298614
+            "inode": "3402930",
+            "_v": 1615845230631
         },
         {
             "id": "b49433e0-9cea-48c4-bda2-7e7d797f845b",
@@ -24220,8 +24406,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "forest_top.png",
-            "inode": "10414574138452534",
-            "_v": 1611079298614
+            "inode": "3402931",
+            "_v": 1615845230631
         },
         {
             "id": "f9b37c5a-d616-49a0-be04-63d6350f3d82",
@@ -24231,8 +24417,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "forest_upper_left.png",
-            "inode": "13229323905559162",
-            "_v": 1611079298614
+            "inode": "3402932",
+            "_v": 1615845230631
         },
         {
             "id": "65550999-99c5-4560-970a-723fa6e05415",
@@ -24242,8 +24428,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "forest_upper_right.png",
-            "inode": "7036874417924828",
-            "_v": 1611079298614
+            "inode": "3402933",
+            "_v": 1615845230631
         },
         {
             "id": "b340b9a2-2865-4e05-91c0-148846a693c8",
@@ -24253,8 +24439,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "house.png",
-            "inode": "14918173765823970",
-            "_v": 1611079298614
+            "inode": "3402934",
+            "_v": 1615845230631
         },
         {
             "id": "d71c3f87-f9b3-49db-802e-0c062f1af848",
@@ -24264,8 +24450,8 @@
             "imageWidth": 256,
             "imageHeight": 256,
             "filename": "kelethin_lift.png",
-            "inode": "27021597764381435",
-            "_v": 1611079298614
+            "inode": "3402935",
+            "_v": 1615845230631
         },
         {
             "id": "eba1ce04-1908-4441-980e-739d03584216",
@@ -24275,8 +24461,8 @@
             "imageWidth": 256,
             "imageHeight": 256,
             "filename": "kelethin_newbie_area.png",
-            "inode": "34902897112280085",
-            "_v": 1611079298614
+            "inode": "3402936",
+            "_v": 1615845230631
         },
         {
             "id": "f8b1c7ad-7bb2-44b2-8189-175ae8698f11",
@@ -24286,8 +24472,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "logo.png",
-            "inode": "20266198323326436",
-            "_v": 1611079298614
+            "inode": "3402937",
+            "_v": 1615845230631
         },
         {
             "id": "b49ea566-b022-478c-979d-ec3ee255fdc5",
@@ -24297,8 +24483,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "menu.png",
-            "inode": "54043195528457706",
-            "_v": 1611079298616
+            "inode": "3402938",
+            "_v": 1615845230631
         },
         {
             "id": "655ada73-deb2-4c59-9c2f-2dfcbb2bfa7d",
@@ -24308,8 +24494,19 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "menu_inventory.png",
-            "inode": "8725724278243858",
-            "_v": 1611079298614
+            "inode": "3402939",
+            "_v": 1615845230631
+        },
+        {
+            "id": "40a3b6c3-e778-44ba-9d99-bb98e4dec91f",
+            "name": "menu_loot",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "menu_loot.png",
+            "inode": "3462379",
+            "_v": 1615849580009
         },
         {
             "id": "92affb53-e3e9-4a09-9d78-ed6d951e5826",
@@ -24319,8 +24516,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "menu_stats.png",
-            "inode": "8725724278243859",
-            "_v": 1611079298614
+            "inode": "3402940",
+            "_v": 1615845230631
         },
         {
             "id": "28b179ce-515d-4363-b7ce-66e82a65bf03",
@@ -24330,8 +24527,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "nexus_portal_gfaydark.png",
-            "inode": "8444249301479117",
-            "_v": 1611079298614
+            "inode": "3402941",
+            "_v": 1615845230631
         },
         {
             "id": "bb445dc2-75ab-4851-95d3-0c4caad3abfd",
@@ -24341,8 +24538,8 @@
             "imageWidth": 256,
             "imageHeight": 256,
             "filename": "outside.png",
-            "inode": "11540474045296157",
-            "_v": 1611079298614
+            "inode": "3402942",
+            "_v": 1615845230631
         },
         {
             "id": "1b7fa267-d716-40f0-b0d0-f4f966610e07",
@@ -24352,8 +24549,8 @@
             "imageWidth": 256,
             "imageHeight": 256,
             "filename": "outside_old.png",
-            "inode": "8444249301479147",
-            "_v": 1611079298614
+            "inode": "3402943",
+            "_v": 1615845230631
         },
         {
             "id": "e3e2ef8b-3095-444c-a659-6ff83c305c05",
@@ -24363,8 +24560,8 @@
             "imageWidth": 256,
             "imageHeight": 256,
             "filename": "paladin_guild.png",
-            "inode": "6755399441215249",
-            "_v": 1611079298614
+            "inode": "3402944",
+            "_v": 1615845230631
         },
         {
             "id": "01cc1060-ebf7-4009-8ee8-26c6f2483e90",
@@ -24374,8 +24571,8 @@
             "imageWidth": 256,
             "imageHeight": 256,
             "filename": "rogue_camp.png",
-            "inode": "10696049115165214",
-            "_v": 1611079298614
+            "inode": "3402945",
+            "_v": 1615845230631
         },
         {
             "id": "f047ff0e-58ad-49fc-bd2b-ec84fc1f7ab3",
@@ -24385,8 +24582,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "titlescreen.png",
-            "inode": "7599824371347150",
-            "_v": 1611079298614
+            "inode": "3402946",
+            "_v": 1615845230631
         },
         {
             "id": "e5617ab9-e8e9-43bb-90a1-a5c3a8400afc",
@@ -24396,8 +24593,8 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "titlescreen_test1.png",
-            "inode": "8162774324768463",
-            "_v": 1611079298614
+            "inode": "3402947",
+            "_v": 1615845230631
         }
     ],
     "spriteSheets": [
@@ -24407,8 +24604,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "1_lift_top_left.png",
-            "inode": "21955048183592945",
-            "_v": 1611079298614
+            "inode": "3402956",
+            "_v": 1615845230631
         },
         {
             "id": "8fb56525-f66a-418f-8a73-e542eb2e963e",
@@ -24416,8 +24613,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "2_lift_top_right.png",
-            "inode": "60517119992954170",
-            "_v": 1611079298614
+            "inode": "3402957",
+            "_v": 1615845230631
         },
         {
             "id": "fa21d9d7-6ae2-415b-8643-fb836446b8df",
@@ -24425,8 +24622,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "3_lift_bottom_left.png",
-            "inode": "466966986363142508",
-            "_v": 1611079298614
+            "inode": "3402958",
+            "_v": 1615845230631
         },
         {
             "id": "3e0d5a68-5499-4c20-bbe9-3c609bea70b2",
@@ -24434,8 +24631,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "4_lift_bottom_right.png",
-            "inode": "16325548649384349",
-            "_v": 1611079298614
+            "inode": "3402959",
+            "_v": 1615845230631
         },
         {
             "id": "6d33651d-9145-42b0-8625-c48e5029ceaf",
@@ -24443,8 +24640,8 @@
             "numFrames": 3,
             "type": "actor",
             "filename": "actor.png",
-            "inode": "12384898975428536",
-            "_v": 1611079298614
+            "inode": "3402960",
+            "_v": 1615845230631
         },
         {
             "id": "0efb7b01-8dbe-47eb-ab34-2fc087937211",
@@ -24452,8 +24649,8 @@
             "numFrames": 6,
             "type": "actor_animated",
             "filename": "actor_animated.png",
-            "inode": "9007199254900666",
-            "_v": 1611079298614
+            "inode": "3402961",
+            "_v": 1615845230631
         },
         {
             "id": "13aa4a5b-4fdc-450c-bba1-2949334b8ad2",
@@ -24461,8 +24658,8 @@
             "numFrames": 7,
             "type": "animated",
             "filename": "armor.png",
-            "inode": "8444249301533205",
-            "_v": 1611079298614
+            "inode": "3402962",
+            "_v": 1615845230631
         },
         {
             "id": "baf08702-081c-4822-97e4-4bf0bacd5a67",
@@ -24470,8 +24667,8 @@
             "numFrames": 7,
             "type": "animated",
             "filename": "armor_darker.png",
-            "inode": "36591746972598806",
-            "_v": 1611079298614
+            "inode": "3402963",
+            "_v": 1615845230631
         },
         {
             "id": "b2950127-6250-410f-8a62-03d9c203d307",
@@ -24479,8 +24676,8 @@
             "numFrames": 6,
             "type": "actor_animated",
             "filename": "bandit.png",
-            "inode": "16888498602980369",
-            "_v": 1611079298615
+            "inode": "3402964",
+            "_v": 1615845230631
         },
         {
             "id": "f94fa957-8199-4cec-a24a-15f66649ebe7",
@@ -24488,8 +24685,8 @@
             "numFrames": 3,
             "type": "actor",
             "filename": "bat.png",
-            "inode": "9288674231611329",
-            "_v": 1611079298614
+            "inode": "3402965",
+            "_v": 1615845230631
         },
         {
             "id": "2bdd7e6c-58f2-42d8-af73-d0b586ecda3e",
@@ -24497,8 +24694,26 @@
             "numFrames": 1,
             "type": "static",
             "filename": "bat_single.png",
-            "inode": "115686215428111340",
-            "_v": 1611079298614
+            "inode": "3402966",
+            "_v": 1615845230631
+        },
+        {
+            "id": "814677f7-f7da-4ed2-9473-29e650c56954",
+            "name": "bat_wing",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "bat_wing.png",
+            "inode": "3460945",
+            "_v": 1615847177080
+        },
+        {
+            "id": "2d1f416f-c60a-416e-a018-c0fd0f1aad13",
+            "name": "belt",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "belt.png",
+            "inode": "3402968",
+            "_v": 1615845230631
         },
         {
             "id": "7a874c56-5a9d-46ba-bb36-ec76bc78746d",
@@ -24506,8 +24721,17 @@
             "numFrames": 1,
             "type": "static",
             "filename": "black-wolf.png",
-            "inode": "36310271995702190",
-            "_v": 1611079298615
+            "inode": "3402969",
+            "_v": 1615845230631
+        },
+        {
+            "id": "95defccd-02c5-4509-ba6f-726f6e2b02aa",
+            "name": "bone",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "bone.png",
+            "inode": "3460968",
+            "_v": 1615847216027
         },
         {
             "id": "35d97d7a-1f76-4bf6-b7f7-ab16a475f4c8",
@@ -24515,8 +24739,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "bundle_of_wood_for_fire.png",
-            "inode": "24769797950707861",
-            "_v": 1611079298615
+            "inode": "3402971",
+            "_v": 1615845230631
         },
         {
             "id": "1e27bb8e-c805-435a-8b87-05b4f50da4f0",
@@ -24524,8 +24748,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "cat.png",
-            "inode": "16325548649377916",
-            "_v": 1611079298615
+            "inode": "3402972",
+            "_v": 1615845230631
         },
         {
             "id": "f0c3033d-e82a-407d-9fe2-3d5da4f59c09",
@@ -24533,8 +24757,17 @@
             "numFrames": 3,
             "type": "actor",
             "filename": "checkbox.png",
-            "inode": "5910974511083656",
-            "_v": 1611079298615
+            "inode": "3402973",
+            "_v": 1615845230631
+        },
+        {
+            "id": "c1d85f50-5521-4cec-a8d0-e4f078382a5c",
+            "name": "coin",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "coin.png",
+            "inode": "3402974",
+            "_v": 1615845230631
         },
         {
             "id": "e2b837e9-d1a3-493b-bb10-65cb0cc0e6bb",
@@ -24542,8 +24775,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "digit-eight.png",
-            "inode": "88946092640586435",
-            "_v": 1611079298616
+            "inode": "3402975",
+            "_v": 1615845230631
         },
         {
             "id": "cb086f88-c5ff-4195-8214-1a1b1d5c8b2f",
@@ -24551,8 +24784,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "digit-five.png",
-            "inode": "147211412819692366",
-            "_v": 1611079298615
+            "inode": "3402976",
+            "_v": 1615845230631
         },
         {
             "id": "17f488f1-96cb-4d25-a804-089c2c57cabf",
@@ -24560,8 +24793,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "digit-four.png",
-            "inode": "43628621390171008",
-            "_v": 1611079298615
+            "inode": "3402977",
+            "_v": 1615845230631
         },
         {
             "id": "81e3f0e2-124b-4ea2-b5f7-9ad7d48e1c8b",
@@ -24569,8 +24802,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "digit-nine.png",
-            "inode": "21110623253319104",
-            "_v": 1611079298617
+            "inode": "3402978",
+            "_v": 1615845230631
         },
         {
             "id": "88d9bf04-702c-42db-a603-b75fee291ed5",
@@ -24578,8 +24811,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "digit-one.png",
-            "inode": "235876030483549687",
-            "_v": 1611079298615
+            "inode": "3402979",
+            "_v": 1615845230631
         },
         {
             "id": "dc6f4e7c-c594-4f71-8d20-b9fcc24c885e",
@@ -24587,8 +24820,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "digit-seven.png",
-            "inode": "17732923532791340",
-            "_v": 1611079298615
+            "inode": "3402980",
+            "_v": 1615845230631
         },
         {
             "id": "fc53b395-d65e-4a47-a552-e69e40575396",
@@ -24596,8 +24829,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "digit-six.png",
-            "inode": "103301316452830845",
-            "_v": 1611079298617
+            "inode": "3402981",
+            "_v": 1615845230631
         },
         {
             "id": "ceff9c82-f847-44a2-ad7a-eaf086d23321",
@@ -24605,8 +24838,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "digit-three.png",
-            "inode": "125819314589683398",
-            "_v": 1611079298616
+            "inode": "3402982",
+            "_v": 1615845230631
         },
         {
             "id": "dd8cb389-2f15-4e53-b042-a15bf74f82c6",
@@ -24614,8 +24847,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "digit-two.png",
-            "inode": "41658296553197276",
-            "_v": 1611079298616
+            "inode": "3402983",
+            "_v": 1615845230631
         },
         {
             "id": "ed44cfbf-ae94-459f-a5e8-982528f0df6f",
@@ -24623,8 +24856,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "digit-zero.png",
-            "inode": "25332747903980319",
-            "_v": 1611079298616
+            "inode": "3402984",
+            "_v": 1615845230631
         },
         {
             "id": "17219846-cda9-4e84-bdfa-c3ff105d42cc",
@@ -24632,8 +24865,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "dog.png",
-            "inode": "7881299348058266",
-            "_v": 1611079298616
+            "inode": "3402985",
+            "_v": 1615845230631
         },
         {
             "id": "ede130e6-013a-42d1-a786-1aed3fd3cf32",
@@ -24641,8 +24874,8 @@
             "numFrames": 2,
             "type": "animated",
             "filename": "duck.png",
-            "inode": "28428972647936191",
-            "_v": 1611079298616
+            "inode": "3402986",
+            "_v": 1615845230631
         },
         {
             "id": "f58966f6-3a9f-4567-b471-ea74f4afb6ad",
@@ -24650,8 +24883,8 @@
             "numFrames": 6,
             "type": "actor_animated",
             "filename": "elf_female.png",
-            "inode": "10696049115396717",
-            "_v": 1611079298617
+            "inode": "3402987",
+            "_v": 1615845230631
         },
         {
             "id": "f2610e3c-8ff9-42fa-a9bb-d1591031fa17",
@@ -24659,8 +24892,8 @@
             "numFrames": 4,
             "type": "animated",
             "filename": "fire.png",
-            "inode": "9851624185032933",
-            "_v": 1611079298617
+            "inode": "3402988",
+            "_v": 1615845230631
         },
         {
             "id": "3aa670d5-671c-4495-bd60-b5c705e359f6",
@@ -24668,8 +24901,8 @@
             "numFrames": 6,
             "type": "actor_animated",
             "filename": "girl.png",
-            "inode": "22517998137022912",
-            "_v": 1611079298617
+            "inode": "3402989",
+            "_v": 1615845230631
         },
         {
             "id": "50d31b4e-c47c-4165-855b-0e8ce876e8dc",
@@ -24677,8 +24910,8 @@
             "numFrames": 6,
             "type": "actor_animated",
             "filename": "guard.png",
-            "inode": "5910974511083769",
-            "_v": 1611079298617
+            "inode": "3402990",
+            "_v": 1615845230631
         },
         {
             "id": "28a894c3-9c95-4277-9651-28e19b5dd9ae",
@@ -24686,8 +24919,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "healthbar.png",
-            "inode": "21955048183883767",
-            "_v": 1611079298617
+            "inode": "3402991",
+            "_v": 1615845230631
         },
         {
             "id": "c8b035d7-7e98-48cb-9ee0-8f1695f96518",
@@ -24695,8 +24928,8 @@
             "numFrames": 6,
             "type": "actor_animated",
             "filename": "highelf_male.png",
-            "inode": "112871465660977234",
-            "_v": 1611079298617
+            "inode": "3402992",
+            "_v": 1615845230631
         },
         {
             "id": "2e1a8e6e-5e33-4052-9cf6-b1d4fd76b83c",
@@ -24704,8 +24937,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "hp_label.png",
-            "inode": "70087269200985366",
-            "_v": 1611079298617
+            "inode": "3402993",
+            "_v": 1615845230631
         },
         {
             "id": "46658393-fef1-4e5d-a2b9-1b2830f5fbde",
@@ -24713,8 +24946,8 @@
             "numFrames": 3,
             "type": "actor",
             "filename": "hurt.png",
-            "inode": "12666373952139516",
-            "_v": 1611079298617
+            "inode": "3402994",
+            "_v": 1615845230631
         },
         {
             "id": "09ad70c6-3ce5-4b97-9e96-466221418a45",
@@ -24722,8 +24955,17 @@
             "numFrames": 1,
             "type": "static",
             "filename": "ice.png",
-            "inode": "7036874417926400",
-            "_v": 1611079298617
+            "inode": "3402995",
+            "_v": 1615845230631
+        },
+        {
+            "id": "99b36d8a-4e00-4635-81ce-773d417a448b",
+            "name": "note",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "note.png",
+            "inode": "3402996",
+            "_v": 1615845230631
         },
         {
             "id": "dfa75239-299d-41fe-a6cd-9e9438da1938",
@@ -24731,8 +24973,8 @@
             "numFrames": 3,
             "type": "actor",
             "filename": "npc001.png",
-            "inode": "8725724278190491",
-            "_v": 1611079298617
+            "inode": "3402997",
+            "_v": 1615845230631
         },
         {
             "id": "40dcd163-9f72-4861-8131-b01eb9baa000",
@@ -24740,8 +24982,8 @@
             "numFrames": 3,
             "type": "actor",
             "filename": "npc002.png",
-            "inode": "18858823439774121",
-            "_v": 1611079298617
+            "inode": "3402998",
+            "_v": 1615845230631
         },
         {
             "id": "bf1277e6-0ad4-4340-b4b5-aca9582e77ef",
@@ -24749,8 +24991,26 @@
             "numFrames": 10,
             "type": "animated",
             "filename": "number-array.png",
-            "inode": "3940649673970537",
-            "_v": 1611079298617
+            "inode": "3402999",
+            "_v": 1615845230631
+        },
+        {
+            "id": "6c302082-8341-4eab-8ca1-1a6cfc846cf2",
+            "name": "orc",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "orc.png",
+            "inode": "3403000",
+            "_v": 1615845230631
+        },
+        {
+            "id": "676ba4a0-b093-4273-9b03-efb7aa812769",
+            "name": "pixie_dust",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "pixie_dust.png",
+            "inode": "3461063",
+            "_v": 1615847271038
         },
         {
             "id": "d8c68742-388a-45b2-94ae-1b27ece2cdff",
@@ -24758,8 +25018,8 @@
             "numFrames": 6,
             "type": "actor_animated",
             "filename": "player.png",
-            "inode": "7599824371347990",
-            "_v": 1611079298617
+            "inode": "3403002",
+            "_v": 1615845230631
         },
         {
             "id": "0187b560-e5ca-45a7-bcd4-b4a0d308fccc",
@@ -24767,8 +25027,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "plunger.png",
-            "inode": "74309393851783862",
-            "_v": 1611079298617
+            "inode": "3403003",
+            "_v": 1615845230631
         },
         {
             "id": "a0442b6a-634f-44da-9962-77938e3ed839",
@@ -24776,8 +25036,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "radio.png",
-            "inode": "9007199254901279",
-            "_v": 1611079298617
+            "inode": "3403004",
+            "_v": 1615845230631
         },
         {
             "id": "3939e8d2-3987-4a22-953e-f1d82134eccf",
@@ -24785,8 +25045,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "rock.png",
-            "inode": "12103423998718498",
-            "_v": 1611079298617
+            "inode": "3403005",
+            "_v": 1615845230631
         },
         {
             "id": "e20ce140-53a5-4b1b-9964-138ba0c86925",
@@ -24794,8 +25054,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "sage.png",
-            "inode": "12103423998718773",
-            "_v": 1611079298617
+            "inode": "3403006",
+            "_v": 1615845230631
         },
         {
             "id": "000a6dde-cb60-436e-b357-30a529daa139",
@@ -24803,8 +25063,8 @@
             "numFrames": 2,
             "type": "animated",
             "filename": "savepoint.png",
-            "inode": "9851624185033528",
-            "_v": 1611079298617
+            "inode": "3403007",
+            "_v": 1615845230631
         },
         {
             "id": "30b8266a-0533-4f90-bd33-e97dc1d498ea",
@@ -24812,8 +25072,17 @@
             "numFrames": 1,
             "type": "static",
             "filename": "signpost.png",
-            "inode": "162974011515631710",
-            "_v": 1611079298617
+            "inode": "3403008",
+            "_v": 1615845230632
+        },
+        {
+            "id": "9c1a3d5c-2234-4a56-be6c-f45758e553a4",
+            "name": "skeleton",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "skeleton.png",
+            "inode": "3403009",
+            "_v": 1615845230631
         },
         {
             "id": "2e2fe329-ca9b-4dce-82df-d672b86dddee",
@@ -24821,8 +25090,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "spider.png",
-            "inode": "4503599627577371",
-            "_v": 1611079298617
+            "inode": "3403010",
+            "_v": 1615845230632
         },
         {
             "id": "30b30f09-7c1e-4061-b42e-25f2dfd03178",
@@ -24830,8 +25099,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "static.png",
-            "inode": "12384898975477207",
-            "_v": 1611079298617
+            "inode": "3403011",
+            "_v": 1615845230632
         },
         {
             "id": "df3fba93-8d6e-4022-8692-9f428547f748",
@@ -24839,8 +25108,8 @@
             "numFrames": 6,
             "type": "actor_animated",
             "filename": "swords.png",
-            "inode": "5348024557715991",
-            "_v": 1611079298617
+            "inode": "3403012",
+            "_v": 1615845230632
         },
         {
             "id": "e9e61bf7-88fd-491d-ae01-4b7f76909108",
@@ -24848,8 +25117,17 @@
             "numFrames": 1,
             "type": "static",
             "filename": "torch.png",
-            "inode": "12103423998839134",
-            "_v": 1611079298617
+            "inode": "3403013",
+            "_v": 1615845230632
+        },
+        {
+            "id": "01dfac98-9b14-41f4-b2cc-55f4152e32bb",
+            "name": "vial_of_blood",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "vial_of_blood.png",
+            "inode": "3403014",
+            "_v": 1615845230632
         },
         {
             "id": "fa9b9106-2a07-488e-a65c-30ec49eb8344",
@@ -24857,8 +25135,8 @@
             "numFrames": 1,
             "type": "static",
             "filename": "wasp.png",
-            "inode": "18577348463233338",
-            "_v": 1611079298617
+            "inode": "3403015",
+            "_v": 1615845230632
         },
         {
             "id": "fcf298da-907b-4b11-893f-4d09b4136d30",
@@ -24866,8 +25144,17 @@
             "numFrames": 2,
             "type": "animated",
             "filename": "wasp_anim.png",
-            "inode": "52917295621642187",
-            "_v": 1611079298617
+            "inode": "3403016",
+            "_v": 1615845230632
+        },
+        {
+            "id": "2155531a-3c26-4d58-a61f-36ddff8382b1",
+            "name": "web",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "web.png",
+            "inode": "3403017",
+            "_v": 1615845230632
         },
         {
             "id": "b3ac5df4-ac42-4db4-88c4-5cd7453785e4",
@@ -24875,8 +25162,17 @@
             "numFrames": 1,
             "type": "static",
             "filename": "wolf.png",
-            "inode": "5910974511315598",
-            "_v": 1611079298617
+            "inode": "3403018",
+            "_v": 1615845230632
+        },
+        {
+            "id": "574b90e5-714e-48b5-bc66-1ed8760e7fba",
+            "name": "wolf_pelt",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "wolf_pelt.png",
+            "inode": "3461609",
+            "_v": 1615847994024
         }
     ],
     "palettes": [
@@ -27111,40 +27407,40 @@
             "name": "Felwithe",
             "filename": "Felwithe.mod",
             "settings": {},
-            "inode": "5910974511111183",
-            "_v": 1611079298599
+            "inode": "3402949",
+            "_v": 1615845230619
         },
         {
             "id": "8e25631b-8780-486a-874f-9d78b25db5b3",
             "name": "Kelethin",
             "filename": "Kelethin.mod",
             "settings": {},
-            "inode": "7881299348068543",
-            "_v": 1611079298599
+            "inode": "3402950",
+            "_v": 1615845230619
         },
         {
             "id": "97806cb4-6136-4338-949c-3d86dd864b97",
             "name": "Opening_Theme",
             "filename": "Opening_Theme.mod",
             "settings": {},
-            "inode": "12384898975428494",
-            "_v": 1611079298599
+            "inode": "3402951",
+            "_v": 1615845230619
         },
         {
             "id": "0c18ee8d-1c6b-4eb6-926d-419c113f3c3d",
             "name": "combat",
             "filename": "combat.mod",
             "settings": {},
-            "inode": "8725724278192912",
-            "_v": 1611079298599
+            "inode": "3402952",
+            "_v": 1615845230617
         },
         {
             "id": "45155e67-0d73-4309-ab1a-57739b942b26",
             "name": "merchant",
             "filename": "merchant.mod",
             "settings": {},
-            "inode": "5348024557533758",
-            "_v": 1611079298599
+            "inode": "3402953",
+            "_v": 1615845230619
         },
         {
             "id": "f50428ab-a084-4591-9bba-2ba10fe7b1c6",
@@ -27153,8 +27449,8 @@
             "settings": {
                 "disableSpeedConversion": false
             },
-            "inode": "8162774324768679",
-            "_v": 1611079298599
+            "inode": "3402954",
+            "_v": 1615845230619
         }
     ],
     "variables": [
@@ -27409,9 +27705,9 @@
         "startY": 0,
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 1422,
-        "worldScrollY": 3828,
-        "zoom": 425,
+        "worldScrollX": 137,
+        "worldScrollY": 41,
+        "zoom": 132.2738037109375,
         "customColorsEnabled": false,
         "defaultBackgroundPaletteIds": [
             "default-bg-1",
