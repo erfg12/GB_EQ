@@ -3956,7 +3956,7 @@
                     "command": "EVENT_GROUP",
                     "args": {
                         "__label": "Set Player Stats",
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
@@ -3969,7 +3969,8 @@
                                         "type": "number",
                                         "value": 25
                                     },
-                                    "__collapse": false
+                                    "__collapse": true,
+                                    "__label": "Set Var HP"
                                 }
                             },
                             {
@@ -3981,7 +3982,8 @@
                                         "type": "number",
                                         "value": 10
                                     },
-                                    "__collapse": true
+                                    "__collapse": true,
+                                    "__label": "Set Var WP"
                                 }
                             },
                             {
@@ -3993,7 +3995,8 @@
                                         "type": "number",
                                         "value": 1
                                     },
-                                    "__collapse": true
+                                    "__collapse": true,
+                                    "__label": "Set Var LVL"
                                 }
                             },
                             {
@@ -4005,7 +4008,8 @@
                                         "type": "number",
                                         "value": 0
                                     },
-                                    "__collapse": true
+                                    "__collapse": true,
+                                    "__label": "Set Var XP"
                                 }
                             },
                             {
@@ -4017,7 +4021,8 @@
                                         "type": "number",
                                         "value": 10
                                     },
-                                    "__collapse": true
+                                    "__collapse": true,
+                                    "__label": "Set Var STR"
                                 }
                             },
                             {
@@ -4029,7 +4034,8 @@
                                         "type": "number",
                                         "value": 25
                                     },
-                                    "__collapse": true
+                                    "__collapse": true,
+                                    "__label": "Set Var Max HP"
                                 }
                             },
                             {
@@ -4041,7 +4047,8 @@
                                         "type": "number",
                                         "value": 20
                                     },
-                                    "__collapse": true
+                                    "__collapse": true,
+                                    "__label": "Set Var Mana"
                                 }
                             },
                             {
@@ -4053,7 +4060,63 @@
                                         "type": "number",
                                         "value": 1
                                     },
-                                    "__collapse": true
+                                    "__collapse": true,
+                                    "__label": "Set Var Gold"
+                                }
+                            },
+                            {
+                                "id": "fe8900ca-cd8c-4f1f-92b4-9ab4b1d78887",
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "20",
+                                    "value": {
+                                        "type": "number",
+                                        "value": 0
+                                    }
+                                }
+                            },
+                            {
+                                "id": "5e8cf857-a2c9-4b32-8bca-4105402222e0",
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "21",
+                                    "value": {
+                                        "type": "number",
+                                        "value": 0
+                                    }
+                                }
+                            },
+                            {
+                                "id": "d88d6b7b-d391-4e4b-9191-484b40a3788f",
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "22",
+                                    "value": {
+                                        "type": "number",
+                                        "value": 0
+                                    }
+                                }
+                            },
+                            {
+                                "id": "234fdcbe-e725-4d89-be6a-6c5bf9eee720",
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "23",
+                                    "value": {
+                                        "type": "number",
+                                        "value": 0
+                                    }
+                                }
+                            },
+                            {
+                                "id": "a3751bfa-7ac5-40a6-b65e-42bd42ae02be",
+                                "command": "EVENT_SET_VALUE",
+                                "args": {
+                                    "variable": "24",
+                                    "value": {
+                                        "type": "number",
+                                        "value": 0
+                                    }
                                 }
                             },
                             {
@@ -4081,7 +4144,7 @@
                     "command": "EVENT_GROUP",
                     "args": {
                         "__label": "Attach Menu",
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "children": {
                         "true": [
@@ -4092,7 +4155,7 @@
                                     "input": [
                                         "start"
                                     ],
-                                    "__collapse": false,
+                                    "__collapse": true,
                                     "persist": true
                                 },
                                 "children": {
@@ -11271,7 +11334,7 @@
                     "command": "EVENT_GROUP",
                     "args": {
                         "__label": "STRENGTH Text",
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
@@ -11284,7 +11347,7 @@
                                         "type": "variable",
                                         "value": "15"
                                     },
-                                    "__collapse": false
+                                    "__collapse": true
                                 }
                             },
                             {
@@ -11299,7 +11362,7 @@
                                     "minValue": "0",
                                     "maxValue": "255",
                                     "clamp": false,
-                                    "__collapse": false
+                                    "__collapse": true
                                 }
                             },
                             {
@@ -11311,7 +11374,7 @@
                                         "type": "variable",
                                         "value": "L0"
                                     },
-                                    "__collapse": false
+                                    "__collapse": true
                                 }
                             },
                             {
@@ -11323,7 +11386,7 @@
                                         "type": "variable",
                                         "value": "15"
                                     },
-                                    "__collapse": false
+                                    "__collapse": true
                                 }
                             },
                             {
@@ -11338,7 +11401,7 @@
                                     "minValue": "0",
                                     "maxValue": "255",
                                     "clamp": false,
-                                    "__collapse": false
+                                    "__collapse": true
                                 }
                             },
                             {
@@ -11350,7 +11413,7 @@
                                         "type": "variable",
                                         "value": "L0"
                                     },
-                                    "__collapse": false
+                                    "__collapse": true
                                 }
                             },
                             {
@@ -27697,6 +27760,26 @@
         {
             "id": "a131fbd0-72b9-483e-97ab-851e3850e60f__L0",
             "name": "XP Till Level"
+        },
+        {
+            "id": "20",
+            "name": "loot_belts"
+        },
+        {
+            "id": "21",
+            "name": "loot_bat_wing"
+        },
+        {
+            "id": "22",
+            "name": "loot_bones"
+        },
+        {
+            "id": "23",
+            "name": "loot_dust"
+        },
+        {
+            "id": "24",
+            "name": "loot_pelt"
         }
     ],
     "settings": {
@@ -27706,7 +27789,7 @@
         "showCollisions": true,
         "showConnections": true,
         "worldScrollX": 137,
-        "worldScrollY": 41,
+        "worldScrollY": 0,
         "zoom": 132.2738037109375,
         "customColorsEnabled": false,
         "defaultBackgroundPaletteIds": [
